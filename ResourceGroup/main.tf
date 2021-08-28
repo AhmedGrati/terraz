@@ -1,18 +1,19 @@
 
 provider "azurerm" {
-	features{}
+  features {}
 }
 terraform {
-	required_providers {
-		azurerm={
-			source="hashicorp/azurerm"
-			version="2.40.0"
-		}
-	}
-	
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "2.40.0"
+    }
+  }
+
 }
 
+# Used to group resources
 resource "azurerm_resource_group" "rg" {
-	name="AzureTerraformResourceGroup"
-	location="westeurope"
+  name     = "AzureTerraformResourceGroup"
+  location = "westeurope"
 }
